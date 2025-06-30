@@ -1,0 +1,175 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "CountryDataFactroy"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
+		},
+		"AzureSqlDatabase1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabase1'"
+		},
+		"AzureSqlde2_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlde2'"
+		},
+		"Sftp1_privateKeyContent": {
+			"type": "secureString",
+			"metadata": "Secure string for 'privateKeyContent' of 'Sftp1'"
+		},
+		"Sftp1_passPhrase": {
+			"type": "secureString",
+			"metadata": "Secure string for 'passPhrase' of 'Sftp1'"
+		},
+		"SqlServer1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SqlServer1'"
+		},
+		"SqlServerdestination2_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SqlServerdestination2'"
+		},
+		"azureSqldestination_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'azureSqldestination'"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "serverpoc728.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "Copydatabase"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "Rajanishku"
+		},
+		"AzureSqlde2_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "serverpoc728.database.windows.net"
+		},
+		"AzureSqlde2_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "Copydatabase"
+		},
+		"AzureSqlde2_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "Rajanishku"
+		},
+		"Sftp1_properties_typeProperties_host": {
+			"type": "string",
+			"defaultValue": "adlsgentl2.blob.core.windows.net"
+		},
+		"Sftp1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "adlsgentl2.sftpauthuser"
+		},
+		"SqlServerdestination2_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "serverpoc728.database.windows.net"
+		},
+		"SqlServerdestination2_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "Copydatabase"
+		},
+		"SqlServerdestination2_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "Rajanishku"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "CountryDataFactroy_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureBlobStorage1_connectionString": {
+						"value": "[parameters('AzureBlobStorage1_connectionString')]"
+					},
+					"AzureSqlDatabase1_password": {
+						"value": "[parameters('AzureSqlDatabase1_password')]"
+					},
+					"AzureSqlde2_password": {
+						"value": "[parameters('AzureSqlde2_password')]"
+					},
+					"Sftp1_privateKeyContent": {
+						"value": "[parameters('Sftp1_privateKeyContent')]"
+					},
+					"Sftp1_passPhrase": {
+						"value": "[parameters('Sftp1_passPhrase')]"
+					},
+					"SqlServerdestination2_password": {
+						"value": "[parameters('SqlServerdestination2_password')]"
+					},
+					"azureSqldestination_connectionString": {
+						"value": "[parameters('azureSqldestination_connectionString')]"
+					},
+					"SqlServer1_connectionString": {
+						"value": "[parameters('SqlServer1_connectionString')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_userName')]"
+					},
+					"AzureSqlde2_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlde2_properties_typeProperties_server')]"
+					},
+					"AzureSqlde2_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlde2_properties_typeProperties_database')]"
+					},
+					"AzureSqlde2_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlde2_properties_typeProperties_userName')]"
+					},
+					"Sftp1_properties_typeProperties_host": {
+						"value": "[parameters('Sftp1_properties_typeProperties_host')]"
+					},
+					"Sftp1_properties_typeProperties_userName": {
+						"value": "[parameters('Sftp1_properties_typeProperties_userName')]"
+					},
+					"SqlServerdestination2_properties_typeProperties_server": {
+						"value": "[parameters('SqlServerdestination2_properties_typeProperties_server')]"
+					},
+					"SqlServerdestination2_properties_typeProperties_database": {
+						"value": "[parameters('SqlServerdestination2_properties_typeProperties_database')]"
+					},
+					"SqlServerdestination2_properties_typeProperties_userName": {
+						"value": "[parameters('SqlServerdestination2_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

@@ -1,0 +1,66 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "CountryDataFactroy"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
+		"AzureSqlde2_password": {
+			"value": ""
+		},
+		"Sftp1_privateKeyContent": {
+			"value": ""
+		},
+		"Sftp1_passPhrase": {
+			"value": ""
+		},
+		"SqlServer1_connectionString": {
+			"value": ""
+		},
+		"SqlServerdestination2_password": {
+			"value": ""
+		},
+		"azureSqldestination_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "serverpoc728.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "Copydatabase"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "Rajanishku"
+		},
+		"AzureSqlde2_properties_typeProperties_server": {
+			"value": "serverpoc728.database.windows.net"
+		},
+		"AzureSqlde2_properties_typeProperties_database": {
+			"value": "Copydatabase"
+		},
+		"AzureSqlde2_properties_typeProperties_userName": {
+			"value": "Rajanishku"
+		},
+		"Sftp1_properties_typeProperties_host": {
+			"value": "adlsgentl2.blob.core.windows.net"
+		},
+		"Sftp1_properties_typeProperties_userName": {
+			"value": "adlsgentl2.sftpauthuser"
+		},
+		"SqlServerdestination2_properties_typeProperties_server": {
+			"value": "serverpoc728.database.windows.net"
+		},
+		"SqlServerdestination2_properties_typeProperties_database": {
+			"value": "Copydatabase"
+		},
+		"SqlServerdestination2_properties_typeProperties_userName": {
+			"value": "Rajanishku"
+		}
+	}
+}
