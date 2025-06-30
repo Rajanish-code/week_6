@@ -1,0 +1,17 @@
+{
+	"name": "AzureSqlde3",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlde2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "SP_Output_Result"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

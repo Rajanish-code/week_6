@@ -1,0 +1,17 @@
+{
+	"name": "sqldestination2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "azureSqldestination",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "userdata"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

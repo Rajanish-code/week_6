@@ -1,0 +1,69 @@
+{
+	"name": "week_6_task2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "apple_products.csv",
+				"container": "week-6"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Product Name",
+				"type": "String"
+			},
+			{
+				"name": "Product URL",
+				"type": "String"
+			},
+			{
+				"name": "Brand",
+				"type": "String"
+			},
+			{
+				"name": "Sale Price",
+				"type": "String"
+			},
+			{
+				"name": "Mrp",
+				"type": "String"
+			},
+			{
+				"name": "Discount Percentage",
+				"type": "String"
+			},
+			{
+				"name": "Number Of Ratings",
+				"type": "String"
+			},
+			{
+				"name": "Number Of Reviews",
+				"type": "String"
+			},
+			{
+				"name": "Upc",
+				"type": "String"
+			},
+			{
+				"name": "Star Rating",
+				"type": "String"
+			},
+			{
+				"name": "Ram",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
